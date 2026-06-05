@@ -1,3 +1,150 @@
-[gd_scene format=3 uid="uid://dykh7as5glmc3"]
+[gd_scene load_steps=5 format=3 uid="uid://dykh7as5glmc3"]
+
+[ext_resource type="Script" uid="uid://baajltymaoyan" path="res://Scripts/global.gd" id="1_8gbba"]
+[ext_resource type="PackedScene" uid="uid://cs1qpsq342y8" path="res://Assets/shadow.tscn" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://dkcyrunjuhfkw" path="res://Assets/player.tscn" id="2_bo1nx"]
+[ext_resource type="Script" uid="uid://yen5vqsw4n6l" path="res://Scenes/record_button.gd" id="4_jjvhh"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_8gbba")
+
+[node name="Checkerboard" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Checkerboard"]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 248.0
+offset_bottom = 248.0
+
+[node name="ColorRect2" type="ColorRect" parent="Checkerboard"]
+offset_left = 248.0
+offset_top = 248.0
+offset_right = 504.0
+offset_bottom = 504.0
+
+[node name="ColorRect3" type="ColorRect" parent="Checkerboard"]
+offset_left = 504.0
+offset_top = 504.0
+offset_right = 760.0
+offset_bottom = 760.0
+
+[node name="ColorRect4" type="ColorRect" parent="Checkerboard"]
+offset_left = 760.0
+offset_top = 760.0
+offset_right = 1016.0
+offset_bottom = 1016.0
+
+[node name="ColorRect5" type="ColorRect" parent="Checkerboard"]
+offset_left = 1016.0
+offset_top = 1016.0
+offset_right = 1272.0
+offset_bottom = 1272.0
+
+[node name="ColorRect6" type="ColorRect" parent="Checkerboard"]
+offset_left = 1272.0
+offset_top = 760.0
+offset_right = 1528.0
+offset_bottom = 1016.0
+
+[node name="ColorRect7" type="ColorRect" parent="Checkerboard"]
+offset_left = 1528.0
+offset_top = 504.0
+offset_right = 1784.0
+offset_bottom = 760.0
+
+[node name="ColorRect8" type="ColorRect" parent="Checkerboard"]
+offset_left = 1784.0
+offset_top = 248.0
+offset_right = 2040.0
+offset_bottom = 504.0
+
+[node name="ColorRect9" type="ColorRect" parent="Checkerboard"]
+offset_left = 1528.0
+offset_top = -8.0
+offset_right = 1784.0
+offset_bottom = 248.0
+
+[node name="ColorRect10" type="ColorRect" parent="Checkerboard"]
+offset_left = 1272.0
+offset_top = 248.0
+offset_right = 1528.0
+offset_bottom = 504.0
+
+[node name="ColorRect11" type="ColorRect" parent="Checkerboard"]
+offset_left = 1016.0
+offset_top = 504.0
+offset_right = 1272.0
+offset_bottom = 760.0
+
+[node name="ColorRect12" type="ColorRect" parent="Checkerboard"]
+offset_left = 760.0
+offset_top = 248.0
+offset_right = 1016.0
+offset_bottom = 504.0
+
+[node name="ColorRect13" type="ColorRect" parent="Checkerboard"]
+offset_left = 504.0
+offset_top = -8.0
+offset_right = 760.0
+offset_bottom = 248.0
+
+[node name="ColorRect14" type="ColorRect" parent="Checkerboard"]
+offset_left = 1016.0
+offset_top = -8.0
+offset_right = 1272.0
+offset_bottom = 248.0
+
+[node name="ColorRect15" type="ColorRect" parent="Checkerboard"]
+offset_left = 1784.0
+offset_top = 760.0
+offset_right = 2040.0
+offset_bottom = 1016.0
+
+[node name="ColorRect16" type="ColorRect" parent="Checkerboard"]
+offset_left = 1528.0
+offset_top = 1016.0
+offset_right = 1784.0
+offset_bottom = 1272.0
+
+[node name="ColorRect17" type="ColorRect" parent="Checkerboard"]
+offset_left = 248.0
+offset_top = 760.0
+offset_right = 504.0
+offset_bottom = 1016.0
+
+[node name="ColorRect18" type="ColorRect" parent="Checkerboard"]
+offset_left = 504.0
+offset_top = 1016.0
+offset_right = 760.0
+offset_bottom = 1272.0
+
+[node name="ColorRect19" type="ColorRect" parent="Checkerboard"]
+offset_left = -8.0
+offset_top = 504.0
+offset_right = 248.0
+offset_bottom = 760.0
+
+[node name="ColorRect20" type="ColorRect" parent="Checkerboard"]
+offset_left = -8.0
+offset_top = 1016.0
+offset_right = 248.0
+offset_bottom = 1272.0
+
+[node name="player" parent="." instance=ExtResource("2_bo1nx")]
+position = Vector2(376, 376)
+scale = Vector2(11, 11)
+
+[node name="shadow" parent="." instance=ExtResource("1_bo1nx")]
+position = Vector2(376, 376)
+scale = Vector2(11, 11)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RecordButton" type="Button" parent="CanvasLayer"]
+offset_left = 17.000004
+offset_top = 14.0
+offset_right = 145.0
+offset_bottom = 45.0
+scale = Vector2(2.0800006, 2.0800006)
+text = "Start Recording"
+script = ExtResource("4_jjvhh")
