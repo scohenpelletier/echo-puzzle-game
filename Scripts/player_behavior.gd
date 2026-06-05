@@ -31,5 +31,5 @@ func get_input():
 		movement_type = "left"
 	
 	# if recording movement, record the input
-	if (Global.record_echo):
+	if (Global.record_echo and movement_type != null):
 		Global.recorded_movement.append(movement_type)
