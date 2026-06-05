@@ -1,13 +1,9 @@
 extends Node2D
 
-# variables
-var recorded_movement : Array
-var record_echo : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
-	recorded_movement = $"../player".recorded_movement
-	record_echo = $"../player".record_echo
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,11 +12,11 @@ func process(_delta: float) -> void:
 
 
 func shadow_move():
-	if (record_echo or recorded_movement.size() < 1):
+	if (Global.record_echo or Global.recorded_movement.size() < 1):
 		return
 	
-	for i in range (recorded_movement.size()):
-		var direction = recorded_movement[i]
+	for i in range (Global.recorded_movement.size()):
+		var direction = Global.recorded_movement[i]
 		
 		if (direction.equals("up")):
 			position.y -= 256 # change to be dimensions of tile
@@ -34,5 +30,5 @@ func shadow_move():
 		if (direction.equals("left")):
 			position.x -= 256
 	
-	# send signal to clear array
-	signal shadow_movement_done
+	# clear the array so that it can be re-recorded
+	Global.recorded_movement.clear()

@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dykh7as5glmc3"]
+[gd_scene load_steps=4 format=3 uid="uid://dykh7as5glmc3"]
 
+[ext_resource type="Script" uid="uid://baajltymaoyan" path="res://Scripts/global.gd" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://cs1qpsq342y8" path="res://Assets/shadow.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://dkcyrunjuhfkw" path="res://Assets/player.tscn" id="2_bo1nx"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_8gbba")
 
 [node name="Checkerboard" type="Node2D" parent="."]
 
@@ -132,10 +134,12 @@ position = Vector2(376, 376)
 scale = Vector2(11, 11)
 
 [node name="shadow" parent="." instance=ExtResource("1_bo1nx")]
+visible = false
 position = Vector2(376, 376)
 scale = Vector2(11, 11)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="StartButton" type="Button" parent="CanvasLayer"]
 offset_left = 17.000004

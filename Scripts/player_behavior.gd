@@ -1,9 +1,5 @@
 extends Node2D
 
-# variables
-var record_echo : bool
-var recorded_movement : Array
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -35,5 +31,5 @@ func get_input():
 		movement_type = "left"
 	
 	# if recording movement, record the input
-	if (record_echo):
-		recorded_movement.append(movement_type)
+	if (Global.record_echo):
+		Global.recorded_movement.append(movement_type)
