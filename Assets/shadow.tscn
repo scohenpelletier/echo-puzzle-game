@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkcyrunjuhfkw"]
+[gd_scene load_steps=3 format=3 uid="uid://cs1qpsq342y8"]
 
-[ext_resource type="Script" uid="uid://chsjmex4r7jj7" path="res://Scripts/player_behavior.gd" id="1_tpd1a"]
+[ext_resource type="Script" uid="uid://bdcqcw6mn2q8f" path="res://Scripts/shadow_behavior.gd" id="1_td1ns"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vc4ur"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_tpd1a")
+script = ExtResource("1_td1ns")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
@@ -17,4 +17,4 @@ offset_left = -10.0
 offset_top = -10.0
 offset_right = 10.0
 offset_bottom = 10.0
-color = Color(0.003921569, 1, 0.003921569, 1)
+color = Color(0.98246723, 0.39174643, 0.62565064, 1)
